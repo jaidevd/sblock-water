@@ -1,0 +1,12 @@
+url:
+  home:
+    pattern: /$YAMLURL/
+    handler: FileHandler
+    kwargs:
+      path: $YAMLPATH/index.html
+  submit:
+    pattern: /$YAMLURL/submit
+    handler: FunctionHandler
+    kwargs:
+      function: main.submit
+      xsrf_cookies: false
